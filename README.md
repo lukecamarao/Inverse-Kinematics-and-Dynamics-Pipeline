@@ -6,7 +6,7 @@
 
 Right-leg walking trial: 3D marker animation (segment ACS fit) synchronized with hip / knee / ankle angle time series (Grood–Suntay knee FE & var–val, ISB-style hip and ankle).
 
-![IK results — markers + joint angles vs frame](IK results.gif)
+![IK results — markers + joint angles vs frame](IKresults.gif)
 
 *Source files live in the repo as (IK_results.gif) (update by copying from e.g. `IK results.gif` if you re-record).*
 
