@@ -67,7 +67,11 @@ flowchart LR
 
 ## Poster
 
-Add the final conference/lab poster to the repo and link it from this section when it is ready—for example save **`poster.jpeg`** (or a full-width PNG at **`poster.jpeg`**) and add a line such as `[Poster (PDF)](poster.jpeg)` here.
+Conference / lab poster as a **JPEG on branch `main`** (single file in the repo root of `reports/`):
+
+![Poster — lower-body IK / ID results](reports/poster.jpeg)
+
+**Add the file:** export or save your final poster as **`reports/poster.jpeg`**, then `git add reports/poster.jpeg`, commit, and push to **`main`**. GitHub’s README renderer resolves that path against the default branch, so the image appears on the repo home once the JPEG is on `main`.
 
 **Acknowledgments (as on poster):** Dr. Fiorentino; NIH NIAMS **R21AR077371**; S. Kohbandeloo.
 
@@ -94,6 +98,6 @@ pdflatex lower_body_pipeline_report.tex
 |------|---------|
 | `c3d/` | Raw / organized C3D and GRF exports |
 | `scripts/static calib/` | Main pipeline scripts, subject folders, NPZ/HTML outputs |
-| `reports/` | LaTeX reports |
+| `reports/` | LaTeX reports; **`poster.jpeg`** (full poster image for README, on `main`) |
 
 **Author:** Luke Camarao — University of Vermont, Biomedical Engineering (see report title pages for mentor and date).
