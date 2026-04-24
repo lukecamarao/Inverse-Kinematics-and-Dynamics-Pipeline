@@ -68,17 +68,7 @@ Primary write-up (compile to PDF):
 
 Companion / earlier narrative (LaTeX source):
 
-- **[`reports/multibody final`](reports/multibody%20final)** — LaTeX source (no `.tex` suffix in repo); *ACS-Based Inverse Kinematics and Inverse Dynamics for Bilateral Gait Analysis*. Rename/copy to `multibody_final.tex` locally if your editor requires the extension.
-
-**Build (example):**
-
-```bash
-cd reports
-pdflatex lower_body_pipeline_report.tex
-```
-
-Add a built PDF to the repo or release (e.g. `reports/Inverse-Kinematics-and-Dynamics-Pipeline.pdf`) and link it here for a one-click **“Full technical report (poster)”** download.
-
+add poster 
 ---
 
 ## Repository layout (high level)
