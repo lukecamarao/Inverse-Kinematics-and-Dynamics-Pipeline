@@ -8,7 +8,7 @@ Right-leg walking trial: 3D marker animation (segment ACS fit) synchronized with
 
 [IK results — markers + joint angles vs frame](reports/IK.gif)
 
-*Source files live in the repo as [`reports/IK_results.gif`](reports/IK.gif) (update by copying from e.g. `Downloads/IK results.gif` if you re-record).
+*Source files live in the repo as [`reports/IK.gif`](reports/IK.gif) (update by copying from e.g. `Downloads/IK results.gif` if you re-record).
 
 ### Inverse dynamics (ID)
 
