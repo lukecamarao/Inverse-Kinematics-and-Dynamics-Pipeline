@@ -106,4 +106,8 @@ Matches the **default branch `main`** tree on GitHub (`README.md`, top-level fol
 
 *A larger local checkout may still include `c3d/`, subject folders, and NPZ/HTML outputs; those are optional and not required for this slim repo layout.*
 
+
+**Raw motion-capture C3D files, force-plate exports, and subject-level NPZ/CSV kinematic or kinetic archives are not uploaded to this repository.** They contain identifiable laboratory measures and health-related movement data; keeping them off the public remote reduces re-identification risk and aligns with treating participant data as sensitive. The code in **`src/`** and documentation in **`reports/`** are shared so the methods remain reproducible in principle; figures and GIFs in **`reports/`** are aggregated or de-identified visuals suitable for public display only.
+
+
 **Author:** Luke Camarao — University of Vermont, Biomedical Engineering (see report title pages for mentor and date).
