@@ -67,11 +67,12 @@ flowchart LR
 
 ## Poster
 
-Conference / lab poster as a **JPEG on branch `main`** (single file in the repo root of `reports/`):
+PNG lives at the **repository root** as **`poster.png`** (default branch `main`), so GitHub renders the image below and it is also available as  
+`https://raw.githubusercontent.com/<your-username>/<your-repo>/main/poster.png`.
 
-![Poster — lower-body IK / ID results](reports/poster.jpeg)
+![Conference poster — IK and ID results (Figs. 4–5)](poster.png)
 
-**Add the file:** export or save your final poster as **`reports/poster.jpeg`**, then `git add reports/poster.jpeg`, commit, and push to **`main`**. GitHub’s README renderer resolves that path against the default branch, so the image appears on the repo home once the JPEG is on `main`.
+Replace **`poster.png`** at the repo root when you export a higher-resolution slide; keep the same filename so this README link stays valid.
 
 **Acknowledgments (as on poster):** Dr. Fiorentino; NIH NIAMS **R21AR077371**; S. Kohbandeloo.
 
@@ -92,12 +93,13 @@ pdflatex lower_body_pipeline_report.tex
 
 ---
 
-## Repository layout (high level)
+## Repository layout 
 
 | Path | Purpose |
 |------|---------|
+| `poster.png` | Conference poster (PNG on `main`, repo root — README embed + raw URL) |
 | `c3d/` | Raw / organized C3D and GRF exports |
 | `scripts/static calib/` | Main pipeline scripts, subject folders, NPZ/HTML outputs |
-| `reports/` | LaTeX reports; **`poster.jpeg`** (full poster image for README, on `main`) |
+| `reports/` | LaTeX reports |
 
 **Author:** Luke Camarao — University of Vermont, Biomedical Engineering (see report title pages for mentor and date).
