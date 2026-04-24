@@ -2,15 +2,13 @@
 
 **End-to-end processing from raw laboratory C3D files to time series of joint angles and intersegmental moments for a pelvis-to-foot chain** — modular Python scripts, intermediate NPZ/CSV artifacts, static calibration, Grood–Suntay knee conventions, and force-plate preprocessing aligned to the kinematic frame rate.
 
-*GitHub layout:* [`src/`](src/) holds the pipeline Python modules; [`reports/`](reports/) holds the LaTeX report, poster PNG, and other figures. If you still develop under `scripts/static calib/` locally, mirror or symlink that tree into `src/` before pushing so these links resolve on **main**.
-
 ### IK results
 
 Right-leg walking trial: 3D marker animation (segment ACS fit) synchronized with hip / knee / ankle angle time series (Grood–Suntay knee FE & var–val, ISB-style hip and ankle).
 
 ![IK results — markers + joint angles vs frame](IK.gif)
 
-*Source files live in the repo as [`reports/IK_results.gif`](IK.gif) (update by copying from e.g. `Downloads/IK results.gif` if you re-record).
+*Source files live in the repo as [`reports/figures/IK_results.gif`](IK.gif) (update by copying from e.g. `Downloads/IK results.gif` if you re-record).
 
 ### Inverse dynamics (ID)
 
@@ -18,14 +16,14 @@ Same trial class: ground-reaction–based Newton–Euler moments at the ankle (P
 
 ![Inverse dynamics — ankle & knee moments vs time](ID.gif)
 
-*Source: [`reports/ID.gif`](ID.gif) (e.g. sync from `Downloads/ID.gif`).*
+*Source: [`reports/figures/ID.gif`](ID.gif) (e.g. sync from `Downloads/ID.gif`).*
 
 ---
 
 ## Results (quick read)
 
-- **IK (kinematics):** See the **IK results** GIF above; interactive exports include `Walk_R04_angles_right.html` and bilateral chain NPZ from [`svd_kabsch.py`](src/svd_kabsch.py).
-- **ID (kinetics):** See the **ID** GIF above; QC PDFs via [`plot_inverse_dynamics_qc.py`](src/plot_inverse_dynamics_qc.py) and HTML viewers under `src/subject 02 - S_Cal02/` (e.g. ankle/knee moment dashboards).
+- **IK (kinematics):** See the **IK results** GIF above; interactive exports include `Walk_R04_angles_right.html` and bilateral chain NPZ from [`svd_kabsch.py`](scripts/static%20calib/svd_kabsch.py).
+- **ID (kinetics):** See the **ID** GIF above; QC PDFs via [`plot_inverse_dynamics_qc.py`](scripts/static%20calib/plot_inverse_dynamics_qc.py) and HTML viewers under `scripts/static calib/subject 02 - S_Cal02/` (e.g. ankle/knee moment dashboards).
 
 ### Comparison to literature (poster)
 
@@ -55,13 +53,13 @@ flowchart LR
 
 | Stage | Role |
 |--------|------|
-| **Static calibration** | Anatomical coordinate systems (ACS), joint-center templates — [`static_calibration.py`](src/static_calibration.py) |
-| **Dynamic IK** | Rigid body fit per frame, bilateral segment rotations — [`svd_kabsch.py`](src/svd_kabsch.py) |
-| **Angles** | Hip / knee (Grood–Suntay) / ankle — [`angles_only.py`](src/angles_only.py), [`joint_angles.py`](src/joint_angles.py) |
-| **Filtering → COM kinematics** | Low-pass kinematics, COM/joint linear acceleration, segment ω and α — [`kinematic_derivatives.py`](src/kinematic_derivatives.py) |
-| **Force plates** | GRF, **COP**, optional export NPZ aligned to marker trials — [`forceplate_preprocess.py`](src/forceplate_preprocess.py) |
-| **Inertia** | Scaled segment mass, COM offset, principal inertias — [`inertial_segments.py`](src/inertial_segments.py) |
-| **ID** | Foot wrench + bottom-up shank/thigh; knee moments in Grood–Suntay JCS — [`inverse_dynamics_newton_euler.py`](src/inverse_dynamics_newton_euler.py) |
+| **Static calibration** | Anatomical coordinate systems (ACS), joint-center templates — [`static_calibration.py`](scripts/static%20calib/static_calibration.py) |
+| **Dynamic IK** | Rigid body fit per frame, bilateral segment rotations — [`svd_kabsch.py`](scripts/static%20calib/svd_kabsch.py) |
+| **Angles** | Hip / knee (Grood–Suntay) / ankle — [`angles_only.py`](scripts/static%20calib/angles_only.py), [`joint_angles.py`](scripts/static%20calib/joint_angles.py) |
+| **Filtering → COM kinematics** | Low-pass kinematics, COM/joint linear acceleration, segment ω and α — [`kinematic_derivatives.py`](scripts/static%20calib/kinematic_derivatives.py) |
+| **Force plates** | GRF, **COP**, optional export NPZ aligned to marker trials — [`forceplate_preprocess.py`](scripts/static%20calib/forceplate_preprocess.py) |
+| **Inertia** | Scaled segment mass, COM offset, principal inertias — [`inertial_segments.py`](scripts/static%20calib/inertial_segments.py) |
+| **ID** | Foot wrench + bottom-up shank/thigh; knee moments in Grood–Suntay JCS — [`inverse_dynamics_newton_euler.py`](scripts/static%20calib/inverse_dynamics_newton_euler.py) |
 
 **Solver:** Rigid-body **Newton–Euler** inverse dynamics with ground reaction **force** at **center of pressure (COP)** on the instrumented foot, propagated proximally with consistent segment ACS and documented sign conventions.
 
@@ -69,13 +67,12 @@ flowchart LR
 
 ## Poster
 
-PNG on the default branch **`main`** at [`reports/poster.png`](reports/poster.png) (matches the public repo layout). Raw URL:
+PNG lives at the **repository root** as **`poster.png`** (default branch `main`), so GitHub renders the image below and it is also available as  
+`https://raw.githubusercontent.com/<your-username>/<your-repo>/main/poster.png`.
 
-`https://raw.githubusercontent.com/lukecamarao/Inverse-Kinematics-and-Dynamics-Pipeline/main/reports/poster.png`
+![Conference poster — IK and ID results (Figs. 4–5)](poster.png)
 
-![Conference poster — IK and ID results (Figs. 4–5)](reports/poster.png)
-
-Overwrite **`reports/poster.png`** when you export a higher-resolution slide; keep the same path so this README and the raw link stay valid.
+Replace **`poster.png`** at the repo root when you export a higher-resolution slide; keep the same filename so this README link stays valid.
 
 **Acknowledgments (as on poster):** Dr. Fiorentino; NIH NIAMS **R21AR077371**; S. Kohbandeloo.
 
@@ -96,16 +93,13 @@ pdflatex lower_body_pipeline_report.tex
 
 ---
 
-## Repository layout (GitHub `main`)
-
-Matches the public repo root: **`README.md`**, **`src/`**, **`reports/`**.
+## Repository layout 
 
 | Path | Purpose |
 |------|---------|
-| [`src/`](src/) | Pipeline Python modules (static calibration → Kabsch → angles → kinematic derivatives → force plate → inertia → Newton–Euler ID); example trial HTML/NPZ under subject folders when committed |
-| [`reports/`](reports/) | [`lower_body_pipeline_report.tex`](reports/lower_body_pipeline_report.tex), **[`poster.png`](reports/poster.png)** (README figure above), and other report assets |
-| `IK.gif`, `ID.gif` | Demo animations linked at the top of this README (keep at repo root next to `README.md`, or move both + update the two `![...]()` lines) |
-
-Raw C3D and large trial data often stay **local only** (not in the GitHub tree); adjust paths in your scripts accordingly.
+| `poster.png` | Conference poster (PNG on `main`, repo root — README embed + raw URL) |
+| `c3d/` | Raw / organized C3D and GRF exports |
+| `scripts/static calib/` | Main pipeline scripts, subject folders, NPZ/HTML outputs |
+| `reports/` | LaTeX reports |
 
 **Author:** Luke Camarao — University of Vermont, Biomedical Engineering (see report title pages for mentor and date).
