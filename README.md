@@ -55,7 +55,7 @@ flowchart LR
 |--------|------|
 | **Static calibration** | Anatomical coordinate systems (ACS), joint-center templates — [`src/static_calibration.py`](src/static_calibration.py) |
 | **Dynamic IK** | Rigid body fit per frame, bilateral segment rotations — [`src/svd_kabsch.py`](src/svd_kabsch.py) |
-| **Angles** | Hip / knee (Grood–Suntay) / ankle — [`src/angles_only.py`](src/angles_only.py), [`src/joint_angles.py`](src/joint_angles.py) |
+| **Angles** | Hip / knee (Grood–Suntay) / ankle — [`src/angles_only.py`](src/angles_only.py)
 | **Filtering → COM kinematics** | Low-pass kinematics, COM/joint linear acceleration, segment ω and α — [`src/kinematic_derivatives.py`](src/kinematic_derivatives.py) |
 | **Force plates** | GRF, **COP**, optional export NPZ aligned to marker trials — [`src/forceplate_preprocess.py`](src/forceplate_preprocess.py) |
 | **Inertia** | Scaled segment mass, COM offset, principal inertias — [`src/inertial_segments.py`](src/inertial_segments.py) |
