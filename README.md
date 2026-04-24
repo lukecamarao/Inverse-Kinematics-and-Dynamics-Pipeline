@@ -6,17 +6,17 @@
 
 Right-leg walking trial: 3D marker animation (segment ACS fit) synchronized with hip / knee / ankle angle time series (Grood–Suntay knee FE & var–val, ISB-style hip and ankle).
 
-![IK results — markers + joint angles vs frame](reports/figures/IK_results.gif)
+![IK results — markers + joint angles vs frame](IK_results.gif)
 
-*Source files live in the repo as [`reports/figures/IK_results.gif`](reports/figures/IK_results.gif) (update by copying from e.g. `Downloads/IK results.gif` if you re-record).*
+*Source files live in the repo as [`reports/figures/IK_results.gif`](IK_results.gif) (update by copying from e.g. `Downloads/IK results.gif` if you re-record).*
 
 ### Inverse dynamics (ID)
 
 Same trial class: ground-reaction–based Newton–Euler moments at the ankle (PF/DF) and knee (FE, abduction/adduction in Grood–Suntay JCS), shown with markers and a moving time cursor.
 
-![Inverse dynamics — ankle & knee moments vs time](reports/figures/ID.gif)
+![Inverse dynamics — ankle & knee moments vs time](ID.gif)
 
-*Source: [`reports/figures/ID.gif`](reports/figures/ID.gif) (e.g. sync from `Downloads/ID.gif`).*
+*Source: [`reports/figures/ID.gif`](ID.gif) (e.g. sync from `Downloads/ID.gif`).*
 
 ---
 
