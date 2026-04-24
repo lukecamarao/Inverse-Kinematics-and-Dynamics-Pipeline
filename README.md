@@ -67,8 +67,6 @@ flowchart LR
 
 ## Poster
 
-PNG lives at the **repository root** as **`poster.png`** (default branch `main`), so GitHub renders the image below and it is also available as  
-`https://raw.githubusercontent.com/<your-username>/<your-repo>/main/poster.png`.
 
 ![Conference poster — IK and ID results (Figs. 4–5)](reports/poster.png)
 
