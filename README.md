@@ -2,16 +2,28 @@
 
 **End-to-end processing from raw laboratory C3D files to time series of joint angles and intersegmental moments for a pelvis-to-foot chain** — modular Python scripts, intermediate NPZ/CSV artifacts, static calibration, Grood–Suntay knee conventions, and force-plate preprocessing aligned to the kinematic frame rate.
 
-![Representative ankle and knee net joint moments (stance vs swing)](reports/figures/ankle_knee_moments.png)
+### IK results
 
-*Hero figure: add `reports/figures/ankle_knee_moments.png` (e.g. export from `scripts/static calib/plot_inverse_dynamics_qc.py` or screenshot from `Walk_R04_ankle_knee_moment_viewer.html`).*
+Right-leg walking trial: 3D marker animation (segment ACS fit) synchronized with hip / knee / ankle angle time series (Grood–Suntay knee FE & var–val, ISB-style hip and ankle).
+
+![IK results — markers + joint angles vs frame](reports/figures/IK_results.gif)
+
+*Source files live in the repo as [`reports/figures/IK_results.gif`](reports/figures/IK_results.gif) (update by copying from e.g. `Downloads/IK results.gif` if you re-record).*
+
+### Inverse dynamics (ID)
+
+Same trial class: ground-reaction–based Newton–Euler moments at the ankle (PF/DF) and knee (FE, abduction/adduction in Grood–Suntay JCS), shown with markers and a moving time cursor.
+
+![Inverse dynamics — ankle & knee moments vs time](reports/figures/ID.gif)
+
+*Source: [`reports/figures/ID.gif`](reports/figures/ID.gif) (e.g. sync from `Downloads/ID.gif`).*
 
 ---
 
 ## Results (quick read)
 
-- **Joint moments:** Ankle and knee traces (lab and JCS where applicable) from Newton–Euler inverse dynamics with GRF at COP; QC plots via [`plot_inverse_dynamics_qc.py`](scripts/static%20calib/plot_inverse_dynamics_qc.py) (PDF bundle) and interactive HTML under `scripts/static calib/subject 02 - S_Cal02/`.
-- **Kinematics:** Segment ACS fitting and joint angles — e.g. `Walk_R04_angles_right.html`, bilateral chain NPZ outputs from [`svd_kabsch.py`](scripts/static%20calib/svd_kabsch.py).
+- **IK (kinematics):** See the **IK results** GIF above; interactive exports include `Walk_R04_angles_right.html` and bilateral chain NPZ from [`svd_kabsch.py`](scripts/static%20calib/svd_kabsch.py).
+- **ID (kinetics):** See the **ID** GIF above; QC PDFs via [`plot_inverse_dynamics_qc.py`](scripts/static%20calib/plot_inverse_dynamics_qc.py) and HTML viewers under `scripts/static calib/subject 02 - S_Cal02/` (e.g. ankle/knee moment dashboards).
 
 **Interpretation (example framing):** For a representative level-walking trial, ankle plantarflexor moment tends to peak in late stance and the knee extension–moment profile shows a mid-stance–biased pattern, consistent with typical sagittal walking kinetics — useful as a sanity check before study-specific claims (e.g. post-ACLR loading comparisons would tie wording to your cohort).
 
