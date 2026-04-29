@@ -65,9 +65,6 @@ flowchart LR
 
 ## Poster
 
-Poster PNG lives under **`reports/`** on branch **`main`** (GitHub root: `README.md`, `src/`, `reports/`). Raw URL pattern:
-
-`https://raw.githubusercontent.com/<username>/<repo>/main/reports/poster.png`
 
 ![Conference poster — IK and ID results (Figs. 4–5)](reports/poster.png)
 
