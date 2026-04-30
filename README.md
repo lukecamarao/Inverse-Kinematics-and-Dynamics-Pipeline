@@ -18,10 +18,7 @@ Same trial class: ground-reaction–based Newton–Euler moments at the ankle (P
 
 ---
 
-## Results (quick read)
-
-- **IK (kinematics):** See the **IK results** GIF above; pipeline code in [`src/svd_kabsch.py`](src/svd_kabsch.py) (and related modules in [`src/`](src/)); trial exports (HTML/NPZ) live in your subject folders or under `reports/` as you prefer.
-- **ID (kinetics):** See the **ID** GIF above; QC plotting in [`src/plot_inverse_dynamics_qc.py`](src/plot_inverse_dynamics_qc.py); moment solvers in [`src/inverse_dynamics_newton_euler.py`](src/inverse_dynamics_newton_euler.py).
+## Results 
 
 ### Comparison to literature 
 
