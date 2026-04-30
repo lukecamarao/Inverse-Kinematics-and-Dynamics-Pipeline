@@ -23,7 +23,7 @@ Same trial class: ground-reaction–based Newton–Euler moments at the ankle (P
 - **IK (kinematics):** See the **IK results** GIF above; pipeline code in [`src/svd_kabsch.py`](src/svd_kabsch.py) (and related modules in [`src/`](src/)); trial exports (HTML/NPZ) live in your subject folders or under `reports/` as you prefer.
 - **ID (kinetics):** See the **ID** GIF above; QC plotting in [`src/plot_inverse_dynamics_qc.py`](src/plot_inverse_dynamics_qc.py); moment solvers in [`src/inverse_dynamics_newton_euler.py`](src/inverse_dynamics_newton_euler.py).
 
-### Comparison to literature (poster)
+### Comparison to literature 
 
 - **Inverse kinematics:** Joint physiologic patterns consistent with gait literature; **knee flexion during stance (~10–20°)** aligns with reported ranges [4].
 - **Inverse dynamics:** Joint moments fall within **ACLR** reporting ranges: **knee** ~**0.3–0.5 Nm/kg**, **ankle plantarflexion** ~**1.2–1.4 Nm/kg** [4].
@@ -32,7 +32,7 @@ Same trial class: ground-reaction–based Newton–Euler moments at the ankle (P
 
 ---
 
-## Pipeline / methods (brief)
+## Pipeline / methods
 
 ```mermaid
 flowchart LR
@@ -70,7 +70,7 @@ flowchart LR
 
 Replace **`reports/poster.png`** when you export a higher-resolution slide; keep the same path so this README link stays valid.
 
-**Acknowledgments (as on poster):** Dr. Fiorentino; NIH NIAMS **R21AR077371**; S. Kohbandeloo.
+**Acknowledgments :** Dr. Fiorentino; NIH NIAMS **R21AR077371**; S. Kohbandeloo.
 
 **References (poster):** [1] Wu et al. (2002), *J. Biomech.* 35(4); [2] Kabsch (1976), *Acta Crystallogr. A* 32(5); [3] Winter (2009), *Biomechanics and Motor Control of Human Movement*; [4] Khandha et al. (2025), *J. Biomech.*
 
