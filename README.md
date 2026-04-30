@@ -2,13 +2,13 @@
 
 **End-to-end processing from raw laboratory C3D files to time series of joint angles and intersegmental moments for a pelvis-to-foot chain** — modular Python scripts, intermediate NPZ/CSV artifacts, static calibration, Grood–Suntay knee conventions, and force-plate preprocessing aligned to the kinematic frame rate.
 
-### IK results
+### Inverse Kinematics results
 
 Right-leg walking trial: 3D marker animation (segment ACS fit) synchronized with hip / knee / ankle angle time series (Grood–Suntay knee FE & var–val, ISB-style hip and ankle).
 
 ![IK results — markers + joint angles vs frame](reports/IK.gif)
 
-### Inverse dynamics (ID)
+### Inverse dynamics 
 
 Same trial class: ground-reaction–based Newton–Euler moments at the ankle (PF/DF) and knee (FE, abduction/adduction in Grood–Suntay JCS), shown with markers and a moving time cursor.
 
@@ -18,7 +18,7 @@ Same trial class: ground-reaction–based Newton–Euler moments at the ankle (P
 
 ---
 
-## Results 
+
 
 ### Comparison to literature 
 
