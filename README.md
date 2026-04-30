@@ -65,7 +65,7 @@ flowchart LR
 
 ![Conference poster — IK and ID results (Figs. 4–5)](reports/poster.png)
 
-Replace **`reports/poster.png`** when you export a higher-resolution slide; keep the same path so this README link stays valid.
+
 
 **Acknowledgments :** Dr. Fiorentino; NIH NIAMS **R21AR077371**; S. Kohbandeloo.
 
