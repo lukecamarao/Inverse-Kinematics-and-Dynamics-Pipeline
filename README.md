@@ -21,11 +21,12 @@ Same trial class: ground-reaction–based Newton–Euler moments at the ankle (P
 
 
 ### Comparison to literature 
+- **Inverse kinematics**: Joint physiologic patterns consistent with gait literature; **knee flexion during stance (~10–20°)** aligns with reported ranges [5].
+- **Inverse dynamics**: Joint moments fall within expected ranges for level walking: **knee ~0.3–0.5 N·m/kg, ankle plantarflexion ~1.2–1.4 N·m/kg** [5], consistent with ACL reconstruction literature reporting reduced knee joint loading and altered sagittal-plane moments relative to healthy controls [6].
 
-- **Inverse kinematics:** Joint physiologic patterns consistent with gait literature; **knee flexion during stance (~10–20°)** aligns with reported ranges [4].
-- **Inverse dynamics:** Joint moments fall within **ACLR** reporting ranges: **knee** ~**0.3–0.5 Nm/kg**, **ankle plantarflexion** ~**1.2–1.4 Nm/kg** [4].
-
-**Reference:** [4] Khandha et al. (2025), *Journal of Biomechanics* (poster Fig. 4–5 captions).
+**Reference:** 
+[1] Winter, D. A., Biomechanics and Motor Control of Human Movement, 4th ed., 2009.
+[2] Butler et al., Br J Sports Med, 2009.
 
 ---
 
