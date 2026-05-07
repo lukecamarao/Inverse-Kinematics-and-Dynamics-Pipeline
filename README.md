@@ -1,40 +1,36 @@
-# Lower-body motion capture: IK → kinetics pipeline
+# Lower-body motion capture: IK → ID pipeline
 
-**End-to-end processing from raw laboratory C3D files to time series of joint angles and intersegmental moments for a pelvis-to-foot chain** — modular Python scripts, intermediate NPZ/CSV artifacts, static calibration, Grood–Suntay knee conventions, and force-plate preprocessing aligned to the kinematic frame rate.
+**End-to-end processing from raw laboratory C3D files to time series of joint angles and intersegmental moments for a pelvis-to-foot chain** modular Python scripts, intermediate NPZ/CSV artifacts, static calibration, Grood–Suntay knee conventions, and force-plate preprocessing aligned to the kinematic frame rate.
 
-### IK results
+### Inverse Kinematics 
 
 Right-leg walking trial: 3D marker animation (segment ACS fit) synchronized with hip / knee / ankle angle time series (Grood–Suntay knee FE & var–val, ISB-style hip and ankle).
 
 ![IK results — markers + joint angles vs frame](reports/IK.gif)
 
-*Place the GIF at [`reports/figures/IK.gif`](reports/IK.gif) on branch `main` (e.g. copy from `Downloads/IK results.gif`).*
-
-### Inverse dynamics (ID)
+### Inverse dynamics 
 
 Same trial class: ground-reaction–based Newton–Euler moments at the ankle (PF/DF) and knee (FE, abduction/adduction in Grood–Suntay JCS), shown with markers and a moving time cursor.
 
 ![Inverse dynamics — ankle & knee moments vs time](reports/ID.gif)
 
-*Place the GIF at [`reports/figures/ID.gif`](reports/ID.gif) on branch `main` (e.g. copy from `Downloads/ID.gif`).*
+
 
 ---
 
-## Results (quick read)
 
-- **IK (kinematics):** See the **IK results** GIF above; pipeline code in [`src/svd_kabsch.py`](src/svd_kabsch.py) (and related modules in [`src/`](src/)); trial exports (HTML/NPZ) live in your subject folders or under `reports/` as you prefer.
-- **ID (kinetics):** See the **ID** GIF above; QC plotting in [`src/plot_inverse_dynamics_qc.py`](src/plot_inverse_dynamics_qc.py); moment solvers in [`src/inverse_dynamics_newton_euler.py`](src/inverse_dynamics_newton_euler.py).
 
-### Comparison to literature (poster)
+### Comparison to literature 
+- **Inverse kinematics**: Joint physiologic patterns consistent with gait literature; **knee flexion during stance (~10–20°)** aligns with reported ranges [1].
+- **Inverse dynamics**: Joint moments fall within expected ranges for level walking: **knee ~0.3–0.5 N·m/kg, ankle plantarflexion ~1.2–1.4 N·m/kg** [1], consistent with ACL reconstruction literature reporting reduced knee joint loading and altered sagittal-plane moments relative to healthy controls [2].
 
-- **Inverse kinematics:** Joint physiologic patterns consistent with gait literature; **knee flexion during stance (~10–20°)** aligns with reported ranges [4].
-- **Inverse dynamics:** Joint moments fall within **ACLR** reporting ranges: **knee** ~**0.3–0.5 Nm/kg**, **ankle plantarflexion** ~**1.2–1.4 Nm/kg** [4].
-
-**Reference:** [4] Khandha et al. (2025), *Journal of Biomechanics* (poster Fig. 4–5 captions).
+**Reference:** 
+[1] Winter, D. A., Biomechanics and Motor Control of Human Movement, 4th ed., 2009.
+[2] Butler et al., Br J Sports Med, 2009.
 
 ---
 
-## Pipeline / methods (brief)
+## Pipeline / methods
 
 ```mermaid
 flowchart LR
@@ -67,15 +63,12 @@ flowchart LR
 
 ## Poster
 
-Poster PNG lives under **`reports/`** on branch **`main`** (GitHub root: `README.md`, `src/`, `reports/`). Raw URL pattern:
-
-`https://raw.githubusercontent.com/<username>/<repo>/main/reports/poster.png`
 
 ![Conference poster — IK and ID results (Figs. 4–5)](reports/poster.png)
 
-Replace **`reports/poster.png`** when you export a higher-resolution slide; keep the same path so this README link stays valid.
 
-**Acknowledgments (as on poster):** Dr. Fiorentino; NIH NIAMS **R21AR077371**; S. Kohbandeloo.
+
+**Acknowledgments :** Dr. Fiorentino; NIH NIAMS **R21AR077371**; S. Kohbandeloo.
 
 **References (poster):** [1] Wu et al. (2002), *J. Biomech.* 35(4); [2] Kabsch (1976), *Acta Crystallogr. A* 32(5); [3] Winter (2009), *Biomechanics and Motor Control of Human Movement*; [4] Khandha et al. (2025), *J. Biomech.*
 
@@ -104,10 +97,10 @@ Matches the **default branch `main`** tree on GitHub (`README.md`, top-level fol
 | **`src/`** | Python pipeline — calibration, SVD/Kabsch, angles, GRF/COP, kinematic derivatives, inertia, Newton–Euler ID, QC plots |
 | **`reports/`** | LaTeX (`lower_body_pipeline_report.tex`), **`poster.png`**, and **`figures/`** (e.g. `IK.gif`, `ID.gif` for the README) |
 
-*A larger local checkout may still include `c3d/`, subject folders, and NPZ/HTML outputs; those are optional and not required for this slim repo layout.*
+
 
 
 **Raw motion-capture C3D files, force-plate exports, and subject-level NPZ/CSV kinematic or kinetic archives are not uploaded to this repository.** They contain identifiable laboratory measures and health-related movement data; keeping them off the public remote reduces re-identification risk and aligns with treating participant data as sensitive. The code in **`src/`** and documentation in **`reports/`** are shared so the methods remain reproducible in principle; figures and GIFs in **`reports/`** are aggregated or de-identified visuals suitable for public display only.
 
 
-**Author:** Luke Camarao — University of Vermont, Biomedical Engineering (see report title pages for mentor and date).
+**Author:** Luke Camarao — University of Vermont, Biomedical Engineering.
