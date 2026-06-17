@@ -78,7 +78,7 @@ flowchart LR
 
 Primary write-up (compile to PDF):
 
-- **[`reports/report.pdf`]
+- **[reports/report.pdf](reports/report.pdf)**
 
 ```bash
 cd reports
