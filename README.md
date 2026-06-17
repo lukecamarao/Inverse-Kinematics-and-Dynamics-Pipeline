@@ -91,7 +91,7 @@ Matches the **default branch `main`** tree on GitHub (`README.md`, top-level fol
 |------|---------|
 | **`README.md`** | This overview (embedded media use paths under `reports/`) |
 | **`src/`** | Python pipeline — calibration, SVD/Kabsch, angles, GRF/COP, kinematic derivatives, inertia, Newton–Euler ID, QC plots |
-| **`reports/`** | LaTeX (`lower_body_pipeline_report.tex`), **`poster.png`**, and **`figures/`** (e.g. `IK.gif`, `ID.gif` for the README) |
+| **`reports/`** | LaTeX (`report.pdf`), **`poster.png`**, and **`figures/`** (e.g. `IK.gif`, `ID.gif` for the README) |
 
 
 
