@@ -78,7 +78,7 @@ flowchart LR
 
 Primary write-up (compile to PDF):
 
-- **[`reports/lower_body_pipeline_report.tex`](reports/lower_body_pipeline_report.tex)** — *Lower-Body Biomechanics Pipeline for Kinematic and Kinetic Analysis from Raw Marker Data* (methods, testing, equations by module).
+- **[`reports/report.pdf`]
 
 ```bash
 cd reports
