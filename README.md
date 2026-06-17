@@ -76,14 +76,10 @@ flowchart LR
 
 ## Full technical report
 
-Primary write-up (compile to PDF):
+Primary write-up:
 
 - **[reports/report.pdf](reports/report.pdf)**
 
-```bash
-cd reports
-pdflatex lower_body_pipeline_report.tex
-```
 
 ---
 
