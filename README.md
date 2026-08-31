@@ -8,7 +8,7 @@ Right-leg walking trial: 3D marker animation (segment ACS fit) synchronized with
 
 ![IK results — markers + joint angles vs frame](reports/IK.gif)
 
-### Inverse dynamics 
+### Inverse Dynamics 
 
 Same trial class: ground-reaction–based Newton–Euler moments at the ankle (PF/DF) and knee (FE, abduction/adduction in Grood–Suntay JCS), shown with markers and a moving time cursor.
 
